@@ -1,4 +1,4 @@
-# Frontend da loja
+# Frontend do Learning Path
 
 Frontend feito com React para o learning path, projeto do estágio no LTI
 
