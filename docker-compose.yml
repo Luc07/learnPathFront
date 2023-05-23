@@ -1,13 +1,15 @@
 version: "3"
 services:
   front:
-    image: lojaspringfront
+    image: frontend
+    container_name: frontreact
     ports:
       - "3000:80"
     depends_on:
       - back
   back:
-    image: lojaspringback
+    image: backspring
+    container_name: backspring
     environment:
       - MYSQL_HOST=mysqlbd
     ports:
@@ -15,6 +17,13 @@ services:
     depends_on:
       - mysqlbd
   mysqlbd:
-    image: lojaspringbd
+    container_name: mysqlbd
+    image: bdlearnpath
+    ports:
+      - "3306:3306"
     environment:
-      - MYSQL_RANDOM_ROOT_PASSWORD=true
+      - MYSQL_ROOT_PASSWORD=1234
+    volumes:
+      - data:/var/lib/mysql
+volumes:
+  data:

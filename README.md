@@ -1,11 +1,10 @@
 # Frontend da loja
 
-Frontend feito com React para a loja
+Frontend feito com React para o learning path, projeto do estágio no LTI
 
 ## Arquivos de configuração
 
 * Dockerfile
-* docker-compose.yml
 
 ## Configurando a aplicação
 
@@ -14,7 +13,7 @@ Altere o valor da URL na linha 7 do arquivo `Dockerfile` para apontar para o hos
 ## Construindo a imagem
 
 ```
-docker build . -t lojaspringfront
+docker build . -t front
 ```
 
 ## Executando a aplicação
